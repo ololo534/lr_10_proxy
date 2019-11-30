@@ -1,0 +1,10 @@
+<h1>Исходные данные</h1>
+<p>Введите натуральное число:</p>
+<%= form_tag("number/output", :method => "get") do %>
+<%= number_field_tag(:value, nil, in: 1..1000000) %><br /><br />
+Применить XSLT:
+<%= select_tag "handling", options_for_select(['На сервере', 'В браузере', 'Не применять']) %><br /><br />
+<div class = "btn btn-primary" >
+  <%= submit_tag("Получить результат",class: "btn btn-primary") %>
+</div>
+<% end %>

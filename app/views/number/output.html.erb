@@ -1,0 +1,19 @@
+<h1>Полученный результат</h1>
+<div id="result">
+  <table>
+      <tr>
+        <th>Десятичная система</th>
+        <th>Двоичная система</th>
+      </tr>
+    <% @result.each do |row| %>
+      <tr>
+      <% row.each do |value| %>
+        <td>
+          <%= value %>
+        </td>
+      <% end %>
+      </tr>
+      <% end %>
+  </table>
+</div>
+<%= link_to "Вернуться к исходным данным", root_path %>
